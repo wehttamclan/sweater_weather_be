@@ -1,6 +1,6 @@
 class ForecastController < ApplicationController
   def show
-
+    render json: {}
   end
   
   private
