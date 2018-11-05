@@ -1,6 +1,6 @@
 class Api::V1::ForecastController < ApplicationController
   def show
-    render json: ForecastFacade.new(location_params)
+    render json: Forecast.new(location_params)
   end
   
   private

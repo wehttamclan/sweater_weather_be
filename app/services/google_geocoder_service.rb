@@ -10,6 +10,10 @@ class GoogleGeocoderService
     "#{coords[:lat]},#{coords[:lng]}"
   end
 
+  def address_components
+    get_json[:results].first[:address_components]
+  end
+
   private
   attr_reader :city, :state, :zip_code
   

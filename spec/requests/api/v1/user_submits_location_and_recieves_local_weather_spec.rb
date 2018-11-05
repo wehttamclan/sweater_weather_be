@@ -8,6 +8,9 @@ describe 'User submits GET request to /api/v1/forecast' do
     
     expect(response.status).to be_successful
     expect(response.body).to have_key :daily
+    expect(response.body).to have_key :city
+    expect(response.body).to have_key :state
+    expect(response.body).to have_key :country
 
     daily = response.body[:daily]
 
