@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  get '/api/v1/forecast', to: 'forecast#show'
+  namespace :api do
+    namespace :v1 do
+      get '/forecast', to: 'forecast#show'
+    end
+  end
 end
