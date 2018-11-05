@@ -4,40 +4,51 @@
       "/Users/JiveTurkey/turing/3module/projects/sweater_weather/app/services/google_geocoder_service.rb": [
         1,
         1,
-        2,
-        2,
-        2,
+        0,
+        0,
+        0,
         null,
         null,
         1,
-        2,
-        2,
+        0,
+        0,
         null,
         null,
         1,
         1,
         null,
         1,
-        2,
+        0,
         null,
         null,
         1,
-        2,
+        0,
         null,
         null,
         1,
         null,
         null,
-        2,
+        0,
         null,
         null,
         1,
-        2,
+        0,
         null,
         null,
         1,
-        2,
+        0,
         null,
+        null
+      ],
+      "/Users/JiveTurkey/turing/3module/projects/sweater_weather/app/controllers/forecast_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/JiveTurkey/turing/3module/projects/sweater_weather/app/controllers/application_controller.rb": [
+        1,
         null
       ],
       "/Users/JiveTurkey/turing/3module/projects/sweater_weather/app/mailers/application_mailer.rb": [
@@ -55,10 +66,6 @@
         0,
         0
       ],
-      "/Users/JiveTurkey/turing/3module/projects/sweater_weather/app/controllers/application_controller.rb": [
-        0,
-        0
-      ],
       "/Users/JiveTurkey/turing/3module/projects/sweater_weather/app/channels/application_cable/connection.rb": [
         0,
         0,
@@ -72,6 +79,6 @@
         0
       ]
     },
-    "timestamp": 1541442336
+    "timestamp": 1541447978
   }
 }
