@@ -16,6 +16,10 @@ class Forecast
     get_address_compenent('country')
   end
 
+  def daily
+    darksky_service
+  end
+
   private
   def get_address_compenent(type)
     geocode_service.address_components.each do |component|
@@ -24,6 +28,10 @@ class Forecast
   end
 
   def geocode_service
-    @geocode_service ||= GoogleGeocoderService.new(@location_data)
+    @service ||= GoogleGeocoderService.new(@location_data)
+  end
+
+  def darksky_service
+    @service ||= DarkskyService.new(geocode_service.coordinates)
   end
 end

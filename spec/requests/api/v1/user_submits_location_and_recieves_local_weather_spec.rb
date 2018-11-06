@@ -5,14 +5,17 @@ describe 'User submits GET request to /api/v1/forecast' do
     location = {city: 'LOS ANGELES', state: 'CA'}
     
     get '/api/v1/forecast', params: location
-    
-    expect(response.status).to be_successful
-    expect(response.body).to have_key :daily
-    expect(response.body).to have_key :city
-    expect(response.body).to have_key :state
-    expect(response.body).to have_key :country
 
-    daily = response.body[:daily]
+    expect(response).to be_successful
+
+    forecast = JSON.parse(response.body, symbolize_names: true)
+    
+    expect(forecast).to have_key :daily
+    expect(forecast).to have_key :city
+    expect(forecast).to have_key :state
+    expect(forecast).to have_key :country
+
+    daily = forecast[:daily]
 
     expect(daily).to have_key :summary
     expect(daily).to have_key :data
