@@ -20,6 +20,14 @@ class Forecast
     DailyForecast.new(darksky_service.forecast[:daily])
   end
 
+  def hourly
+    HourlyForecast.new(darksky_service.forecast[:hourly])
+  end
+
+  def currently
+    CurrentForecast.new(darksky_service.forecast[:currently])
+  end
+
   private
   def get_address_compenent(type)
     geocode_service.address_components.each do |component|

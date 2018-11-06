@@ -1,49 +1,36 @@
 class Day
   include ActiveModel::Serialization
+  attr_reader :time, 
+              :summary, 
+              :icon, 
+              :sunrise_time, 
+              :sunset_time, 
+              :moon_phase, 
+              :precip_probability, 
+              :precip_type, 
+              :temperature_high, 
+              :temperature_low, 
+              :wind_speed, 
+              :wind_gust, 
+              :wind_bearing
+              
   def initialize(daily_data)
     @daily_data = daily_data
+    @time  = daily_data[:time]
+    @summary  = daily_data[:summary]
+    @icon  = daily_data[:icon]
+    @sunrise_time  = daily_data[:sunriseTime]
+    @sunset_time  = daily_data[:sunsetTime]
+    @moon_phase  = daily_data[:moonPhase]
+    @precip_probability  = daily_data[:precipProbability]
+    @precip_type  = daily_data[:precipType]
+    @temperature_high  = daily_data[:temperatureHigh]
+    @temperature_low  = daily_data[:temperatureLow]
+    @wind_speed  = daily_data[:windSpeed]
+    @wind_gust  = daily_data[:windGust]
+    @wind_bearing = daily_data[:windBearing]
   end
     
-  def time
-    daily_data[:time]
-  end
-
-  def summary 
-    daily_data[:summary]
-  end
-
-  def icon 
-    daily_data[:icon]
-  end
-
-  def sunrise_time 
-    daily_data[:sunriseTime]
-  end
-
-  def sunset_time 
-    daily_data[:sunsetTime]
-  end
-
-  def moon_phase 
-    daily_data[:moonPhase]
-  end
-
-  def precip_probability 
-    daily_data[:precipProbability]
-  end
-
-  def precip_type 
-    daily_data[:precipType]
-  end
-
-  def temperature_high 
-    daily_data[:temperatureHigh]
-  end
-
-  def temperature_low 
-    daily_data[:temperatureLow]
-  end
-
   private
   attr_reader :daily_data
 end

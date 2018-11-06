@@ -3,7 +3,6 @@ class DarkskyService
     @coordinates = coordinates
   end
 
-
   def forecast
     JSON.parse(response.body, symbolize_names: true)
   end
