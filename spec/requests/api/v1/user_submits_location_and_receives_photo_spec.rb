@@ -10,6 +10,8 @@ describe 'User submits GET request to /api/v1/backgrounds' do
 
     background = JSON.parse(response.body, symbolize_names: true)
     
+    expect(background).to have_key :city
+    expect(background).to have_key :state
     expect(background).to have_key :url
 
 

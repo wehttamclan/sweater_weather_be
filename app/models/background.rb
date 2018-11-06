@@ -21,7 +21,7 @@ class Background
     @geocode_service ||= GoogleGeocoderService.new(@location_data)
   end
 
-  def darksky_service
-    @darksky_service ||= DarkskyService.new(geocode_service.coordinates)
+  def flickr_service
+    @flickr_service ||= FlickrService.new(geocode_service.coordinates)
   end
 end

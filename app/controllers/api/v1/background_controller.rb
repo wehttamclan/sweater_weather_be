@@ -5,6 +5,6 @@ class Api::V1::BackgroundController < ApplicationController
   
   private
   def location_params
-    params.permit(:city, :state, :zip_code)
+    params.permit(:city, :state)
   end
 end
