@@ -17,7 +17,7 @@ class Forecast
   end
 
   def daily
-    darksky_service
+    DailyForecast.new(darksky_service.forecast[:daily])
   end
 
   private
@@ -28,10 +28,10 @@ class Forecast
   end
 
   def geocode_service
-    @service ||= GoogleGeocoderService.new(@location_data)
+    @geocode_service ||= GoogleGeocoderService.new(@location_data)
   end
 
   def darksky_service
-    @service ||= DarkskyService.new(geocode_service.coordinates)
+    @darksky_service ||= DarkskyService.new(geocode_service.coordinates)
   end
 end

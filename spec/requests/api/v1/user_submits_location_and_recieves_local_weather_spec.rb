@@ -25,12 +25,12 @@ describe 'User submits GET request to /api/v1/forecast' do
     expect(daily[:data].first).to have_key :time
     expect(daily[:data].first).to have_key :summary
     expect(daily[:data].first).to have_key :icon
-    expect(daily[:data].first).to have_key :sunriseTime
-    expect(daily[:data].first).to have_key :sunsetTime
-    expect(daily[:data].first).to have_key :moonPhase
-    expect(daily[:data].first).to have_key :precipProbability
-    expect(daily[:data].first).to have_key :precipType
-    expect(daily[:data].first).to have_key :temperatureHigh
-    expect(daily[:data].first).to have_key :temperatureLow
+    expect(daily[:data].first).to have_key :sunrise_time
+    expect(daily[:data].first).to have_key :sunset_time
+    expect(daily[:data].first).to have_key :moon_phase
+    expect(daily[:data].first).to have_key :precip_probability
+    expect(daily[:data].first).to have_key :precip_type
+    expect(daily[:data].first).to have_key :temperature_high
+    expect(daily[:data].first).to have_key :temperature_low
   end
 end
