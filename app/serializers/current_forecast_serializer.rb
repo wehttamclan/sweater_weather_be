@@ -7,6 +7,7 @@ class CurrentForecastSerializer < ActiveModel::Serializer
              :humidity, 
              :wind_speed, 
              :wind_gust,
+             :wind_bearing,
              :visibility,
              :uv_index
 

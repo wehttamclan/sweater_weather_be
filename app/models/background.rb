@@ -1,4 +1,4 @@
-class Forecast
+class Background
   include ActiveModel::Serialization
   def initialize(location_data)
     @location_data = location_data
@@ -14,18 +14,6 @@ class Forecast
 
   def country
     geocode_service.country
-  end
-
-  def daily
-    DailyForecast.new(darksky_service.forecast[:daily])
-  end
-
-  def hourly
-    HourlyForecast.new(darksky_service.forecast[:hourly])
-  end
-
-  def currently
-    CurrentForecast.new(darksky_service.forecast[:currently])
   end
 
   private

@@ -8,6 +8,7 @@ class CurrentForecast
               :humidity, 
               :wind_speed, 
               :wind_gust,
+              :wind_bearing,
               :visibility,
               :uv_index
 
@@ -21,6 +22,7 @@ class CurrentForecast
     @humidity = current_forecast[:humidity]
     @wind_speed = current_forecast[:windSpeed]
     @wind_gust = current_forecast[:windGust]
+    @wind_bearing = current_forecast[:windBearing]
     @visibility = current_forecast[:visibility]
     @uv_index = current_forecast[:uvIndex]
   end
