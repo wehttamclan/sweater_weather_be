@@ -1,7 +1,7 @@
 class DailyForecastSerializer < ActiveModel::Serializer
-  attributes :summary, :icon, :days
+  attributes :summary, :icon, :data
 
-  def days
+  def data
     object.days.map do |day|
       DaySerializer.new(day)
     end
