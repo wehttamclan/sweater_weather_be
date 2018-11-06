@@ -4,6 +4,10 @@ class Background
     @location_data = location_data
   end
 
+  def image
+    flickr_service.urls.sample
+  end
+
   def city
     geocode_service.city
   end
