@@ -18,7 +18,7 @@ class FlickrService
     { 
      method: 'flickr.photos.search',
      api_key: ENV['flickr_api_key'],
-     tags: 'city,skyline',
+     tags: 'city,skyline,park,building',
      lat: @lat,
      lon: @lon,
      radius: '20',
@@ -26,7 +26,8 @@ class FlickrService
      format: 'json',
      nojsoncallback: '1',
      sort: 'interestingness-desc',
-     extras: 'url_o'
+     extras: 'url_o',
+     per_page: '50'
     }
   end
 

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'User submits GET request to /api/v1/forecast' do
-  xit 'with city, state and returns daily forecast data' do
+  it 'with city, state and returns daily forecast data' do
     location = {city: 'LOS ANGELES', state: 'CA'}
     
     get '/api/v1/forecast', params: location

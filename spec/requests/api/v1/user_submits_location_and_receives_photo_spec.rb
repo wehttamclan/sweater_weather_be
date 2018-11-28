@@ -12,8 +12,12 @@ describe 'User submits GET request to /api/v1/backgrounds' do
     
     expect(background).to have_key :city
     expect(background).to have_key :state
-    expect(background).to have_key :url
+    expect(background).to have_key :country
+    expect(background).to have_key :image
 
-
+    expect(background[:city]).to eq 'Denver'
+    expect(background[:state]).to eq 'CO'
+    expect(background[:country]).to eq 'US'
+    # expect(background[:image][-4..-1]).to eq '.jpg'
   end
 end
