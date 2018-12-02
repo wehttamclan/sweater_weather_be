@@ -10,6 +10,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'figaro'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'faraday'
+gem 'rack-cors', require: 'rack/cors'
 
 
 group :development, :test do
